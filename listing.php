@@ -22,7 +22,9 @@ $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findListingInfo?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
-
+//print_r($jsonContent);
+renderListing($jsonContent);
+/*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent->data[0];
 
@@ -36,7 +38,7 @@ if ($jsonContent->success == 1) {
     ' . print_r($jsonContent) . '
     </div>';
 }
-
+*/
 // Include a way to return to the previous page
 echo '<br />
 <h4 class="ds-heading-4 ds-margin-t-b-2"><a href="index.php">&lt back to complete listings</a></h4>
