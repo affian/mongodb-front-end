@@ -60,7 +60,7 @@ function renderListing($listing) {
     // Here we present that information to the user
     echo '<div class="ds-row">
     <div class="ds-col-6 ds-shadow-floating ds-bg-neutral-2">
-    <h3 class="ds-heading-2 ds-margin-t-2">' . $listing->id . ' </h3>
+    <h3 class="ds-heading-2 ds-margin-t-2"><a href="listing.php?id=' . $listing->id . '"></a>' . $listing->id . ' </h3>
     <div class="ds-hr-thick"></div>
     <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->name . '</h4>
     <p class="ds-margin-b-2">
