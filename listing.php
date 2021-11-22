@@ -22,11 +22,9 @@ $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
-print_r($jsonContent);
-print_r("above is jsonContent below should be dollarlisting.");
-$listing = $jsonContent->data[0];
-print_r($listing);
-renderListing($listing);
+//print_r($jsonContent);
+//print_r("above is jsonContent below should be dollarlisting.");
+renderListing($jsonContent);
 /*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent->data[0];
