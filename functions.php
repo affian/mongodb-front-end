@@ -35,8 +35,15 @@ function renderListing($listing) {
     // We are not limited to using just the data that comes from our API calls.
 
     // Create a nicely formatted version of the listing info
-    //property
+    
+    $propertyId = $listing->id;
     $propertyName = $listing->name;
+    $neighborhood = $listing->neighborhood_cleansed;
+    $accommodates = $listing->accommodates;
+    $price = $listing->price;
+    
+    //###############################
+    /*
     $description = $listing->description;
     $neighborhood = $listing->neighborhood_overview;
     $propertyType = $listing->property_type;
@@ -49,24 +56,19 @@ function renderListing($listing) {
     $hostSince = $listing->host_since;
     $hostAbout = $listing->host_about;
     $hostResponseRate = $listing->host_response_rate;
-
+*/
     // Here we present that information to the user
     echo '<div class="ds-row">
     <div class="ds-col-6 ds-shadow-floating ds-bg-neutral-2">
-    <h3 class="ds-heading-2 ds-margin-t-2">' . $listing->name . ' </h3>
+    <h3 class="ds-heading-2 ds-margin-t-2">' . $listing->id . ' </h3>
     <div class="ds-hr-thick"></div>
-    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->review_scores_value . '</h4>
+    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->name . '</h4>
     <p class="ds-margin-b-2">
-    ' . $propertyName . '<br />
-    ' . $description . '
+    ' . $neighborhood . '<br />
+    ' . $accommodates . '<br />
+    ' . $price . '<br />
     </p>
-    <h4 class="ds-heading-3">Host Info</h4>
-    <div class="ds-table-container">
-    <table class="ds-table ds-table-compact">
-    <tr><th>Host\'s Name</th><th>Host Since</th><th>About</th></tr>
-        <tr><td class="ds-text-align-right">$' . $listing->host_name . '</td><td class="ds-text-align-right">$' . $listing->host_since . '</td><td class="ds-text-align-right">$' . $listing->host_about . '</td></tr>
-            <tr><td>&nbsp</td><td class="ds-text-align-right">Response Rate:</td><td class="ds-text-align-right">$' . $hostResponseRate . '</td></tr>
-    </table>  
+    
     <p class="ds-margin-b-2">&nbsp</p>
     </div></div></div>
     ';
