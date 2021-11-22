@@ -23,7 +23,8 @@ $rperfresponse = $rperfclient->request('GET', 'findListingInfo?id=' . $_GET['id'
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
 //print_r($jsonContent);
-renderListing($jsonContent);
+$listing = $jsonContent->data[0];
+renderListing($listing);
 /*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent->data[0];
