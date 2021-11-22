@@ -36,19 +36,19 @@ function renderListing($listing) {
 
     // Create a nicely formatted version of the listing info
     //property
-    $propertyName = ucfirst(strtolower($listing->name));
-    $description = ucfirst(strtolower($listing->description));
-    $neighborhood = ucfirst(strtolower($listing->neighborhood_overview));
-    $propertyType = ucfirst(strtolower($listing->property_type));
-    $bathrooms = ucfirst(strtolower($listing->bathrooms_text));
-    $bedrooms = ucfirst(strtolower($listing->bedrooms));
-    $beds = ucfirst(strtolower($listing->beds));
-    $price = ucfirst(strtolower($listing->price));
+    $propertyName = $listing->name;
+    $description = $listing->description;
+    $neighborhood = $listing->neighborhood_overview;
+    $propertyType = $listing->property_type;
+    $bathrooms = $listing->bathrooms_text;
+    $bedrooms = $listing->bedrooms;
+    $beds = $listing->beds;
+    $price = $listing->price;
     //host
-    $hostName = ucfirst(strtolower($listing->host_name));
-    $hostSince = ucfirst(strtolower($listing->host_since));
-    $hostAbout = ucfirst(strtolower($listing->host_about));
-    $hostResponseRate = ucfirst(strtolower($listing->host_response_rate));
+    $hostName = $listing->host_name;
+    $hostSince = $listing->host_since;
+    $hostAbout = $listing->host_about;
+    $hostResponseRate = $listing->host_response_rate;
 
     // Here we present that information to the user
     echo '<div class="ds-row">
@@ -58,13 +58,7 @@ function renderListing($listing) {
     <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->review_scores_value . '</h4>
     <p class="ds-margin-b-2">
     ' . $propertyName . '<br />
-    ' . $description . '<br />
-    ' . $neighborhood . '<br />
-    ' . $propertyType . '<br />
-    ' . $bathrooms . '<br />
-    ' . $bedrooms . '<br />
-    ' . $beds . '<br />
-    ' . $price . '<br />
+    ' . $description . '
     </p>
     <h4 class="ds-heading-3">Host Info</h4>
     <div class="ds-table-container">
