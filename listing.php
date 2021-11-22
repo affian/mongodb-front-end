@@ -22,7 +22,8 @@ $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findListings?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
-
+print_r($jsonContent);
+print_r("above is jsonContent below should be dollarlisting.");
 $listing = $jsonContent->data[0];
 print_r($listing);
 renderListing($listing);
