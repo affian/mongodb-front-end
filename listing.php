@@ -24,7 +24,7 @@ $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, true);
 print_r($jsonContent);
 print_r("above is jsonContent below the price & name of this listing.");
-//renderListing($jsonContent);
+renderListing($jsonContent);
 /*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent->data[0];
