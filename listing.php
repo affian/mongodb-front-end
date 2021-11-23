@@ -21,9 +21,9 @@ We have called against another API endpoint to pull this data from our database.
 $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
-$jsonContent = json_decode($content, true);
-print_r($jsonContent);
-print_r("above is jsonContent below the price & name of this listing.");
+$jsonContent = json_decode($content, false);
+//print_r($jsonContent);
+//print_r("above is jsonContent below the price & name of this listing.");
 renderListing($jsonContent);
 /*
 if ($jsonContent->success == 1) {
