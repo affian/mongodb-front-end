@@ -29,7 +29,7 @@ function drawTable($listings) {
 }
 
 // This function produces the HTML to construct a listing for a single property using data held in the $listing object
-function renderListing($listProp) {
+function renderListing($listing) {
     // The following steps demonstrate that the data coming back from the API calls to the database can be manipulated
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
@@ -52,13 +52,13 @@ function renderListing($listProp) {
     // Here we present that information to the user
     echo '<div class="ds-row">
     <div class="ds-col-6 ds-shadow-floating ds-bg-neutral-2">
-    <h3 class="ds-heading-2 ds-margin-t-2">' . $listProp->id . ' </h3>
+    <h3 class="ds-heading-2 ds-margin-t-2">' . $listing->id . ' </h3>
     <div class="ds-hr-thick"></div>
-    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listProp->name . '</h4>
+    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->name . '</h4>
     <p class="ds-margin-b-2">
-    ' . $listProp->neighborhood_cleansed . '<br />
-    ' . $listProp->accommodates . '<br />
-    ' . $listProp->price . '<br />
+    ' . $listing->neighborhood_cleansed . '<br />
+    ' . $listing->accommodates . '<br />
+    ' . $listing->price . '<br />
     </p>
     
     <p class="ds-margin-b-2">&nbsp</p>
