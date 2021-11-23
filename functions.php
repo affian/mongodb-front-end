@@ -34,24 +34,12 @@ function renderListing($listing) {
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
     
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->id . '</a></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->name . '</a></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->description . '</a></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->property_type . '</a></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->bedrooms . '</a></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->price . '</a></td>';
-    echo '</tr>';  
+    $propertyType = ucfirst(strtolower($listing->property_type));
+    
+    echo '<div class="ds-row"><div class="ds-col-6ds-alert ds-success ds-mar-t-1">
+    <p>This is a ' . $propertyType . ' property.<p/>
+    </div></div>';
+   
     
 }
 
