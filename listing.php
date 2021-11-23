@@ -19,12 +19,11 @@ We have called against another API endpoint to pull this data from our database.
 
 // Start with the listing information - we use the API endpoint 
 $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
-$rperfresponse = $rperfclient->request('GET', 'findListings?id=' . $_GET['id']);
+$rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
 print_r($jsonContent);
-print_r($jsonContent->data);
-print_r("above is jsonContent below should be dollarlisting.");
+print_r("above is jsonContent.");
 renderListing($jsonContent);
 /*
 if ($jsonContent->success == 1) {
