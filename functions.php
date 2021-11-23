@@ -53,9 +53,6 @@ function renderListing($listing) {
     echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->price . '</a></td>';
     echo '</tr>';  
     
-    <p class="ds-margin-b-2">&nbsp</p>
-    </div></div></div>
-    ';
 }
 
 
