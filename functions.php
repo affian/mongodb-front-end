@@ -33,33 +33,25 @@ function renderListing($listing) {
     // The following steps demonstrate that the data coming back from the API calls to the database can be manipulated
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
-
-    //###############################
-    /*
-    $description = $listing->description;
-    $neighborhood = $listing->neighborhood_overview;
-    $propertyType = $listing->property_type;
-    $bathrooms = $listing->bathrooms_text;
-    $bedrooms = $listing->bedrooms;
-    $beds = $listing->beds;
-    $price = $listing->price;
-    //host
-    $hostName = $listing->host_name;
-    $hostSince = $listing->host_since;
-    $hostAbout = $listing->host_about;
-    $hostResponseRate = $listing->host_response_rate;
-*/
-    // Here we present that information to the user
-    echo '<div class="ds-row">
-    <div class="ds-col-6 ds-shadow-floating ds-bg-neutral-2">
-    <h3 class="ds-heading-2 ds-margin-t-2">' . $listing->id . ' ' . $listing->name . '</h3>
-    <div class="ds-hr-thick"></div>
-    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing->description . '</h4>
-    <p class="ds-margin-b-2">
-    ' . $listing->neighborhood_cleansed . '<br />
-    ' . $listing->accommodates . '<br />
-    ' . $listing->price . '<br />
-    </p>
+    
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->id . '</a></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->name . '</a></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->description . '</a></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->property_type . '</a></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->bedrooms . '</a></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<td><a href="listing.php?id=' . $listing->id . '">' . $listing->price . '</a></td>';
+    echo '</tr>';  
     
     <p class="ds-margin-b-2">&nbsp</p>
     </div></div></div>
