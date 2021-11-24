@@ -37,7 +37,7 @@ function renderListing($listing) {
     //$propertyType = ucfirst(strtolower($listing->property_type));
     
     echo '<div class="ds-row"><div class="ds-col-6ds-alert ds-success ds-mar-t-1">
-    <p>This is a ' . $listing->name . ' property.</p>
+    <p>This property is called ' . $listing->name . ' .</p>
     </div></div>';
    
     
