@@ -23,7 +23,8 @@ $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, false);
 print_r($jsonContent);
-renderListing($jsonContent);
+print_r("The above is jsonContent.");
+//renderListing($jsonContent);
 /*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent->data[0];
