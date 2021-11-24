@@ -22,7 +22,7 @@ $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, true);
-$name = $jsonContent['name'];
+$name = $jsonContent[0]['name'];
 print_r($jsonContent);
 print_r("The above is jsonContent.");
 print_r($name);
