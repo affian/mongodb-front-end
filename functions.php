@@ -43,7 +43,6 @@ function renderListing($listing) {
     <p class="ds-margin-b-2">
     Description: ' . $listing['description'] . '. <br />
     Neighbourhood Overview: ' . $listing['neighborhood_overview'] . ' <br />
-    <br />
     Bathrooms: ' . $listing['bathrooms_text'] . ' <br />
     Bedrooms: ' . $listing['bedrooms'] . ' <br />
     Beds: ' . $listing['beds'] . ' <br />
