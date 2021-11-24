@@ -42,7 +42,8 @@ function renderListing($listing) {
     <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing['property_type'] . '</h4>
     <p class="ds-margin-b-2">
     Description: ' . $listing['description'] . '. <br />
-    Neighbourhood Overview: ' . $listing['neighborhood_overview'] . '. <br />
+    Neighbourhood Overview: ' . $listing['neighborhood_overview'] . ' <br />
+    <br />
     Bathrooms: ' . $listing['bathrooms_text'] . ' <br />
     Bedrooms: ' . $listing['bedrooms'] . ' <br />
     Beds: ' . $listing['beds'] . ' <br />
