@@ -34,12 +34,30 @@ function renderListing($listing) {
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
     
-    //$propertyType = ucfirst(strtolower($listing->property_type));
-    
-    echo '<div class="ds-row"><div class="ds-col-6ds-alert ds-success ds-mar-t-1">
-    <p>This property is called ' . $listing['name'] . ' .</p>
-    </div></div>';
-   
+    // Here we present that information to the user
+    echo '<div class="ds-row">
+    <div class="ds-col-6 ds-shadow-floating ds-bg-neutral-2">
+    <h3 class="ds-heading-2 ds-margin-t-2"> ' . $listing['name'] . ' : ' . $listing['price'] . ' </h3>
+    <div class="ds-hr-thick"></div>
+    <h4 class="ds-heading-3 ds-margin-t-b-2">' . $listing['property_type'] . '</h4>
+    <p class="ds-margin-b-2">
+    Description: ' . $listing['description'] . '. <br />
+    Neighbourhood Overview: ' . $listing['neighborhood_overview'] . ' <br />
+    Bathrooms: ' . $listing['bathrooms_text'] . ' <br />
+    Bedrooms: ' . $listing['bedrooms'] . ' <br />
+    Beds: ' . $listing['beds'] . ' <br />
+    Accommodates: ' . $listing['accommodates'] . ' 
+    </p>
+    <h4 class="ds-heading-3">About the Host</h4>
+    <div class="ds-table-container">
+    <table class="ds-table ds-table-compact">
+    <tr><th>Name</th><th>Location</th><th>Response Time</th></tr>
+    <tr><td class="ds-text-align-right">$' . $listing['host_name'] . '</td><td class="ds-text-align-right">$' . $listing['host_location'] . '</td><td class="ds-text-align-right">$' . $listing['host_response_time'] . '</td></tr>
+    <tr><td>&nbsp</td><td class="ds-text-align-right">Acceptance Rate:</td><td class="ds-text-align-right">$' . $listing['host_acceptance_rate'] . '</td></tr>
+    </table>
+    <p class="ds-margin-b-2">&nbsp</p>
+    </div></div></div>
+    ';   
     
 }
 
