@@ -34,10 +34,10 @@ function renderListing($listing) {
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
     
-    $propertyType = ucfirst(strtolower($listing->property_type));
+    //$propertyType = ucfirst(strtolower($listing->property_type));
     
     echo '<div class="ds-row"><div class="ds-col-6ds-alert ds-success ds-mar-t-1">
-    <p>This is a ' . $propertyType . ' property.</p>
+    <p>This is a ' . $listing->name . ' property.</p>
     </div></div>';
    
     
