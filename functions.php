@@ -50,7 +50,7 @@ function renderListing($listing) {
     Beds: ' . $listing['beds'] . ' <br />
     Accommodates: ' . $listing['accommodates'] . ' 
     </p>
-    <h4 class="ds-heading-3">About the Host</h4>
+    <h4 class="ds-heading-3">About the Host:</h4>
     <div class="ds-table-container">
     <table class="ds-table ds-table-compact">
     <tr><th>Name</th><th>Location</th><th>Response Time</th></tr>
