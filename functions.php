@@ -34,8 +34,8 @@ function renderListing($listing) {
     // within the front-end code to provide further insights and more detail to the end user.
     // We are not limited to using just the data that comes from our API calls.
     
-    $image = $listing['picture_url'];
-    $imageData = base64_encode(file_get_contents($image));
+    //$image = $listing['picture_url'];
+    //$imageData = base64_encode(file_get_contents($image));
     
     // Here we present that information to the user
     echo '<div class="ds-row">
@@ -65,7 +65,7 @@ function renderListing($listing) {
     
     ';
     
-    echo '<img src="data:image/jpeg;base64, ' . $imageData . ' ">';
+    //echo '<img src="data:image/jpeg;base64, ' . $imageData . ' ">';
     
 }
 
