@@ -21,7 +21,7 @@ We have called against another API endpoint to pull this data from our database.
 $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
-$jsonContent = json_decode($content, false);
+$jsonContent = json_decode($content, true);
 print_r($jsonContent);
 print_r("The above is jsonContent.");
 //renderListing($jsonContent);
