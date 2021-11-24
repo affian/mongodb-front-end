@@ -22,9 +22,9 @@ $rperfclient = new GuzzleHttp\Client([ 'base_uri'=>$apiBaseUri]);
 $rperfresponse = $rperfclient->request('GET', 'findall?id=' . $_GET['id']);
 $content = $rperfresponse->getBody();
 $jsonContent = json_decode($content, true);
-//$listing = $jsonContent[0];
-//renderListing($listing);
-
+$listing = $jsonContent[0];
+renderListing($listing);
+/*
 if ($jsonContent->success == 1) {
     $listing = $jsonContent[0];
 
@@ -37,7 +37,7 @@ if ($jsonContent->success == 1) {
     echo '<div class="ds-margin-t-b-2">API call to look up listing has failed.
     ' . print_r($jsonContent) . '
     </div>';
-} 
+} */
 
 // Include a way to return to the previous page
 echo '<br />
