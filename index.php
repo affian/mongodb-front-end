@@ -1,7 +1,7 @@
 <?php
 
 //Instana monitoring script------------------------------------------------------------------------------------
-<script>
+echo "<script>
   (function(s,t,a,n){s[t]||(s[t]=a,n=s[a]=function(){n.q.push(arguments)},
   n.q=[],n.v=2,n.l=1*new Date)})(window,"InstanaEumObject","ineum");
 
@@ -9,7 +9,8 @@
   ineum('key', 'qO8rk0ypRWmaqsa3MwMHmA');
   ineum('trackSessions');
 </script>
-<script defer crossorigin="anonymous" src="http://instana-01.hybrid-cloud.lab:2999/eum.min.js"></script>
+<script defer crossorigin="anonymous" src="http://instana-01.hybrid-cloud.lab:2999/eum.min.js"></script>"
+;
 ----------------------------------------------------------------------------------------------------------------
   
 require_once('functions.php');
