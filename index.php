@@ -1,18 +1,17 @@
 <?php
 
-//Instana monitoring script
-echo '<script>
+//Instana monitoring script------------------------------------------------------------------------------------
+<script>
   (function(s,t,a,n){s[t]||(s[t]=a,n=s[a]=function(){n.q.push(arguments)},
   n.q=[],n.v=2,n.l=1*new Date)})(window,"InstanaEumObject","ineum");
 
   ineum('reportingUrl', 'http://instana-01.hybrid-cloud.lab:2999/');
   ineum('key', 'qO8rk0ypRWmaqsa3MwMHmA');
   ineum('trackSessions');
-</script>'
-;
-echo '<script defer crossorigin="anonymous" src="http://instana-01.hybrid-cloud.lab:2999/eum.min.js"></script>'
-;
-
+</script>
+<script defer crossorigin="anonymous" src="http://instana-01.hybrid-cloud.lab:2999/eum.min.js"></script>
+----------------------------------------------------------------------------------------------------------------
+  
 require_once('functions.php');
 require_once('page-header.php');
 require('vendor/autoload.php');
