@@ -1,5 +1,5 @@
 <?php
-
+/*
 //Instana monitoring script------------------------------------------------------------------------------------
 echo '<script>
   (function(s,t,a,n){s[t]||(s[t]=a,n=s[a]=function(){n.q.push(arguments)},
@@ -13,7 +13,7 @@ echo '<script>
 echo '<script defer crossorigin="anonymous" src="http://instana-01.hybrid-cloud.lab:2999/eum.min.js"></script>
 ';
 ----------------------------------------------------------------------------------------------------------------
-  
+ */
 require_once('functions.php');
 require_once('page-header.php');
 require('vendor/autoload.php');
